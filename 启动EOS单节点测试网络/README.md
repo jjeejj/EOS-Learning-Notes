@@ -233,7 +233,7 @@ cleos get account eosio --json
 
 关于以上内容，EOS官方最近也给出[教程](https://developers.eos.io/eosio-nodeos/docs/learn-about-wallets-keys-and-accounts-with-cleos)可供参考（不使用docker）。
 
-**04-启动连接主网的节点**
+**01-启动连接主网的节点**
 ----------------------------------------------
 
 使用docker-compose-main-net-v1.0.5.yaml文件启动节点，注意此文件依赖：[genesis.json](./genesis.json) 和 [config-main-net.ini](./config-main-net.ini)文件。
@@ -248,7 +248,7 @@ alias cleos='docker-compose -f docker-compose-main-net-v1.0.5.yaml exec keosd /o
 ```
 **注意**：以上启动的节点中使用的Keys是公开的测试账户，私钥已经暴露，十分不安全，仅作为学习、实验参考。同样万不可导入个人真实私钥去连接主网，或启动节点！谨记！
 
-**04-使用已存在的超级节点**
+**01-使用已存在的超级节点**
 ----------------------------------------------
 同样启动keosd，使用docker-compose-main-net-v1.0.5.yaml即可。
 注意下面将cleos命令中的 http://nodeosd:8888 替换成了某个超级节点的地址http://40.114.68.16:8888
